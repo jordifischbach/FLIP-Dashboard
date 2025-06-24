@@ -42,9 +42,6 @@ ui <- dashboardPage(
     #subheader FLIP description
     h5("Free, Local, Immediate, and Persuasive (FLIP) Co-Benefits of Climate Action", style = "color: #ecf0f1; margin-top: 0; margin-bottom: 15px;"),
       
-      #subheader FLIP description
-      h5("Free, Local, Immediate, and Persuasive (FLIP) Co-Benefits of Climate Action", style = "color: #ecf0f1; margin-top: 0; margin-bottom: 15px;"),
-      
       # Project description
       div(
         style = "color: #ecf0f1; text-align: left; margin-bottom: 15px;",
