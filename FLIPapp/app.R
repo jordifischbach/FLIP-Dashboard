@@ -1,8 +1,3 @@
-# Install required packages if not already installed
-required_packages <- c("shiny", "shinydashboard", "leaflet", "sf", "dplyr", "readxl", "readr", "tidygeocoder")
-new_packages <- required_packages[!(required_packages %in% installed.packages()[,"Package"])]
-if(length(new_packages)) install.packages(new_packages)
-
 # Load required libraries
 library(shiny)
 library(shinydashboard)
@@ -38,7 +33,7 @@ get_sector_color <- function(sector) {
 ui <- dashboardPage(
   # Dashboard header
   dashboardHeader(
-    title = "FLIP Dashboard"
+    title = "FLIP: Co-Benefits of Climate Action"
   ),
   
   # Dashboard sidebar
@@ -87,7 +82,7 @@ ui <- dashboardPage(
     # Main content with map
     fluidRow(
       box(
-        title = "FLIP Case Studies World Map",
+        title = "FLIP Case Studies",
         status = "primary",
         solidHeader = TRUE,
         width = 12,
