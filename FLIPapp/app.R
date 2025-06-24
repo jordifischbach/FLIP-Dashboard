@@ -20,9 +20,9 @@ sector_colors <- list(
 )
 
 # Create color function
-get_sector_color <- function(sector) {
-  if (!is.null(sector_colors[[sector]])) {
-    sector_colors[[sector]]
+get_sector_color <- function(Sector) {
+  if (!is.null(sector_colors[[Sector]])) {
+    sector_colors[[Sector]]
   } else {
     "black"  # fallback color if sector not found
   }
@@ -79,7 +79,7 @@ ui <- dashboardPage(
       "))
     ),
     
-    # Main content with map
+    # MAP
     fluidRow(
       box(
         title = "FLIP Case Studies",
@@ -98,9 +98,6 @@ server <- function(input, output, session) {
   
   output$world_map <- renderLeaflet({
     
-    # Debug: Print flip_sf structure
-    print(paste("flip_sf has", nrow(flip_sf), "rows"))
-    print(head(flip_sf))
     
     # Extract coordinates from sf geometry
     coords <- st_coordinates(flip_sf)
@@ -113,10 +110,6 @@ server <- function(input, output, session) {
         latitude = coords[,2],
         color = sapply(Sector, get_sector_color)
       )
-    
-    # Debug: Print processed data
-    print("Processed flip_df:")
-    print(head(flip_df))
     
     # Create base map
     leaflet(flip_df) %>%
