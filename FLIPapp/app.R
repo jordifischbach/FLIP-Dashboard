@@ -38,6 +38,9 @@ ui <- dashboardPage(
         icon("leaf", style = "color: green; margin-right: 10px; font-size: 20px;"),
         h3("FLIP", style = "margin: 0; color: white;")
       ),
+    
+    #subheader FLIP description
+    h5("Free, Local, Immediate, and Persuasive (FLIP) Co-Benefits of Climate Action", style = "color: #ecf0f1; margin-top: 0; margin-bottom: 15px;"),
       
       #subheader FLIP description
       h5("Free, Local, Immediate, and Persuasive (FLIP) Co-Benefits of Climate Action", style = "color: #ecf0f1; margin-top: 0; margin-bottom: 15px;"),
