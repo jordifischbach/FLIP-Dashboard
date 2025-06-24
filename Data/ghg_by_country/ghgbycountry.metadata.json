@@ -1,0 +1,36 @@
+{
+  "chart": {
+    "title": "Greenhouse gas emissions",
+    "subtitle": "[Greenhouse gas emissions](#dod:ghgemissions) include carbon dioxide, methane and nitrous oxide from all sources, including land-use change. They are measured in tonnes of [carbon dioxide-equivalents](#dod:carbondioxideequivalents) over a 100-year timescale.",
+    "note": "Land-use change emissions can be negative.",
+    "citation": "Jones et al. (2024)",
+    "originalChartUrl": "https://ourworldindata.org/grapher/total-ghg-emissions?v=1&csvType=full&useColumnShortNames=false",
+    "selection": [
+      "European Union (28)",
+      "United States",
+      "United Kingdom",
+      "China"
+    ]
+  },
+  "columns": {
+    "Annual greenhouse gas emissions in CO₂ equivalents": {
+      "titleShort": "Annual greenhouse gas emissions including land use",
+      "titleLong": "Annual greenhouse gas emissions including land use",
+      "descriptionShort": "[Greenhouse gas emissions](#dod:ghgemissions) are measured in tonnes of [carbon dioxide-equivalents](#dod:carbondioxideequivalents) over a 100-year timescale.",
+      "descriptionProcessing": "Emissions given in tonnes have been converted to carbon-dioxide equivalents over a 100-year timescale using a conversion factor of 273 for nitrous oxide, 29.8 for methane from fossil sources, and 27.2 for methane from agricultural and land use sources. These factors are taken from the 6th Assessment Report (AR6) of the Intergovernmental Panel on Climate Change (IPCC).",
+      "shortUnit": "t",
+      "unit": "tonnes of CO₂ equivalents",
+      "timespan": "1850-2023",
+      "type": "Numeric",
+      "owidVariableId": 998927,
+      "shortName": "annual_emissions_ghg_total_co2eq",
+      "lastUpdated": "2024-11-21",
+      "nextUpdate": "2025-11-21",
+      "citationShort": "Jones et al. (2024) – with major processing by Our World in Data",
+      "citationLong": "Jones et al. (2024) – with major processing by Our World in Data. “Annual greenhouse gas emissions including land use” [dataset]. Jones et al., “National contributions to climate change 2024.2” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/998927.metadata.json"
+    }
+  },
+  "dateDownloaded": "2025-06-24",
+  "activeFilters": {}
+}
