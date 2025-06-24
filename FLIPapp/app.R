@@ -15,19 +15,10 @@ sector_colors <- list(
   "Land Use" = "green",
   "Energy" = "gold", 
   "Food and Agriculture" = "red",
-  "Buildings" = "brown",
-  "Industry" = "blue"
+  "Buildings" = "grey",
+  "Industry" = "purple",
+  "Transportation" = "blue"
 )
-
-# Create color function
-get_sector_color <- function(Sector) {
-  if (!is.null(sector_colors[[Sector]])) {
-    sector_colors[[Sector]]
-  } else {
-    "black"  # fallback color if sector not found
-  }
-}
-
 
 # UI
 ui <- dashboardPage(
@@ -48,10 +39,13 @@ ui <- dashboardPage(
         h3("FLIP", style = "margin: 0; color: white;")
       ),
       
+      #subheader FLIP description
+      h5("Free, Local, Immediate, and Persuasive (FLIP) Co-Benefits of Climate Action", style = "color: #ecf0f1; margin-top: 0; margin-bottom: 15px;"),
+      
       # Project description
       div(
         style = "color: #ecf0f1; text-align: left; margin-bottom: 15px;",
-        p("Short description of the project goes here.")
+        p("Successful climate change, while a global challenge, will require local solutions to be successful. Historically, climate action has been framed as an expensive distraction from more immediate local goals such as economic development and social prosperity. FLIP seeks to reframe this faulty narrative by demonstrating the economic, environmental, social, and health co-benefits climate action accrues to the local population, while simultaniously decreasing GHG emissions")
       ),
       
       # Dotted line separator
@@ -60,7 +54,7 @@ ui <- dashboardPage(
       # Tool description
       div(
         style = "color: #ecf0f1; text-align: left;",
-        p("This interactive world map displays FLIP case study locations with color-coded markers representing different sectors. Click on any marker to view detailed information about each case study.")
+        p("This interactive world map displays FLIP case study locations with color-coded markers representing different sectors. Click on any marker to view detailed information about each case study. Read the full report here [url]")
       )
     )
   ),
@@ -79,7 +73,7 @@ ui <- dashboardPage(
       "))
     ),
     
-    # MAP
+    # Main content with map
     fluidRow(
       box(
         title = "FLIP Case Studies",
@@ -107,8 +101,7 @@ server <- function(input, output, session) {
       st_drop_geometry() %>%
       mutate(
         longitude = coords[,1],
-        latitude = coords[,2],
-        color = sapply(Sector, get_sector_color)
+        latitude = coords[,2]
       )
     
     # Create base map
@@ -124,8 +117,8 @@ server <- function(input, output, session) {
           "<strong>Sector:</strong> ", Sector, "<br/><br/>",
           Summary
         ),
-        color = ~color,
-        fillColor = ~color,
+        color = ~Color,
+        fillColor = ~Color,
         radius = 8,
         weight = 2,
         opacity = 0.8,
