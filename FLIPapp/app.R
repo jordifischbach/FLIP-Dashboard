@@ -25,7 +25,7 @@ sector_colors <- list(
 ui <- dashboardPage(
   # Dashboard header
   dashboardHeader(
-    title = "FLIP: Co-Benefits of Climate Action"
+    title = "FLIP"
   ),
   
   # Dashboard sidebar
@@ -37,7 +37,7 @@ ui <- dashboardPage(
       div(
         style = "display: flex; align-items: center; justify-content: center; margin-bottom: 15px;",
         icon("leaf", style = "color: green; margin-right: 10px; font-size: 20px;"),
-        h3("FLIP", style = "margin: 0; color: white;")
+        h3("FLIP: Co-Benefits of Climate Action", style = "margin: 0; color: white;")
       ),
       
       #subheader FLIP description
