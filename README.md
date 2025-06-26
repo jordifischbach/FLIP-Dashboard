@@ -2,11 +2,10 @@
 Repository for FLIP Dashboard
 
 DATA: 
-GHG by sector
+GHG by sector by country
+
 Breakdown of carbon dioxide, methane and nitrous oxide emissions by sector
-  citation:
-  LONG:  
-  SHORT: Climate Watch (2024) – with major processing by Our World in Data
+  citation: Climate Watch (2024) – with major processing by Our World in Data.
 
 GHG by country
 Annual greenhouse gas emissions including land use

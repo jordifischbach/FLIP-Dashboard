@@ -52,10 +52,27 @@ ui <- dashboardPage(
       # Dotted line separator
       hr(style = "border-top: 2px dotted #7f8c8d; margin: 20px 0;"),
       
-      # Tool description
+      # Map description
       div(
         style = "color: #ecf0f1; text-align: left;",
         p("This interactive world map displays FLIP case study locations with color-coded markers representing different sectors. Click on any marker to view detailed information about each case study. Read the full report here [url]")
+      ),
+      
+      # Dotted line separator
+      hr(style = "border-top: 2px dotted #7f8c8d; margin: 20px 0;"),
+      
+      # Stacked area description
+      div(
+        style = "color: #ecf0f1; text-align: left;",
+        p("Select countries and sectors to compare emissions data from 1990-2021.")
+      ),
+      # Dotted line separator
+      hr(style = "border-top: 2px dotted #7f8c8d; margin: 20px 0;"),
+      
+      # Data and AI disclaimer description
+      div(
+        style = "color: #ecf0f1; text-align: left;",
+        p("Emissions data retrieved from Climate Watch (2024) – with major processing by Our World in Data. Learn more about the data at https://ourworldindata.org/co2-and-greenhouse-gas-emissions#explore-data-on-co2-and-greenhouse-gas-emissions. Code was produced with assitance from generative AI, namely ChatGPT and Shiny Assistant.")
       )
     )
   ),
